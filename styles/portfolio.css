@@ -1,0 +1,39 @@
+:root {
+  --primary-color: #f5f5f5;
+  --secondary-color: #111349;
+  --acent-color: #c879ff;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h1 {
+  max-width: 700px;
+  font-family: "Roboto";
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--secondary-color);
+  -webkit-font-smoothing: antialiased;
+  margin-left: 15%;
+  margin-bottom: 0;
+}
+
+.container strong {
+  color: var(--acent-color);
+}
+
+.subtitle {
+  font-family: "Roboto";
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--secondary-color);
+  margin-left: 15%;
+  margin-top: 10px;
+}
+span.typed-text {
+  color: #c879ff;
+}
