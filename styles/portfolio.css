@@ -2,38 +2,111 @@
   --primary-color: #f5f5f5;
   --secondary-color: #111349;
   --acent-color: #c879ff;
+  --default-font: "Roboto", sans-serif;
+  --acent-font: "Lora", serif;
+}
+
+body {
+  font-family: var(--default-font);
+  color: var(--secondary-color);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 150px 15px;
 }
 
 h1 {
   max-width: 700px;
-  font-family: "Roboto";
+  font-family: var(--acent-font);
   font-size: 40px;
   font-weight: 500;
   line-height: 1.5;
-  color: var(--secondary-color);
-  -webkit-font-smoothing: antialiased;
   margin-left: 15%;
   margin-bottom: 0;
 }
 
-.container strong {
+strong {
   color: var(--acent-color);
 }
 
 .subtitle {
-  font-family: "Roboto";
   font-size: 20px;
-  font-weight: 500;
-  color: var(--secondary-color);
+  font-weight: 400;
   margin-left: 15%;
   margin-top: 10px;
 }
 span.typed-text {
-  color: #c879ff;
+  color: var(--acent-color);
+}
+
+.header {
+  padding: 30px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 97%;
+  z-index: 100;
+  font-size: 16px;
+  letter-spacing: 0;
+  font-weight: 600;
+}
+.header .logo {
+  position: absolute;
+  overflow: hidden;
+  width: 150px;
+}
+.header a {
+  text-decoration: none;
+  display: grid;
+  color: #b8b8b8;
+  margin-right: 30px;
+}
+.mask-lnk strong {
+  color: #707070;
+}
+.hover-masks-logo .mask-lnk {
+  position: relative;
+  display: block;
+  transform: translateY(0);
+  transition: opacity 0.7s cubic-bezier(0.165, 0.85, 0.45, 1),
+    color 0.7s cubic-bezier(0.165, 0.85, 0.45, 1),
+    transform 0.7s cubic-bezier(0.165, 0.85, 0.45, 1);
+}
+.hover-masks-logo .mask-lnk.mask-lnk-hover {
+  position: absolute;
+  transform: translateY(32px px);
+  -webkit-transform: translateY(32px);
+}
+.hover-masks-logo a:hover .mask-lnk.mask-lnk-hover {
+  transform: translateY(0);
+}
+.hover-masks a:hover .mask-lnk,
+.hover-masks-logo a:hover .mask-lnk {
+  transform: translateY(-32px);
+  -webkit-transform: translateY(-32px);
+}
+
+.top-menu-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.top-menu-nav ul li {
+  display: inline-block;
+  position: relative;
+}
+.menu {
+  display: flex;
+  justify-content: flex-end;
+}
+span.current-menu-item {
+  color: #707070;
+}
+.top-menu-nav a:hover {
+  color: var(--acent-color);
 }
